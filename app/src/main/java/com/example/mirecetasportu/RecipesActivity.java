@@ -25,6 +25,10 @@ public class RecipesActivity extends AppCompatActivity {
             "Cakes", "Pudding", "Souffle", "Frozen Yogurt",
             "Tart", "Beignets", "Banana Bread", "Cookies"};
 
+    private String[] cookingTime = new String[] {"Hour", "One hour and a half", "Half hour", "Two hours", "Hour",
+            "Half hour", "Two hours", "Hour", "Two and half hours", "Fifteen minutes", "Hour", "Thirty minutes",
+            "Three hours", "Forty five minutes" };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
