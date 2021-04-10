@@ -17,9 +17,10 @@ public class RecipesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recipes);
 
+        mFoodTypeTextView = (TextView) findViewById(R.id.foodTypeTextView);
+
         Intent intent = getIntent();
         String foodType = intent.getStringExtra("foodType");
         mFoodTypeTextView.setText("Here are all the related recipes: " + foodType);
-
     }
 }

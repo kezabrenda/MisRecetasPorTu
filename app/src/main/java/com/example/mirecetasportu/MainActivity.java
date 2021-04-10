@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
         ButterKnife.bind(this);
 
+        mFoodTypeEditText = (EditText) findViewById(R.id.foodTypeEditText);
         mFindRecipesButton = (Button) findViewById(R.id.findRecipesButton);
 
         mFindRecipesButton.setOnClickListener(new View.OnClickListener() {
