@@ -6,12 +6,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
     @BindView(R.id.findRecipesButton) Button mFindRecipesButton;
+    @BindView(R.id.foodTypeEditText) EditText mFoodTypeEditText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         mFindRecipesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String foodType = mFoodTypeEditText.getText().toString();
                 Intent intent = new Intent(MainActivity.this, RecipesActivity.class);
                 startActivity(intent);
             }
