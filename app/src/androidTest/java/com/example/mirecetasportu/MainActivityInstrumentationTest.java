@@ -32,7 +32,7 @@ public class MainActivityInstrumentationTest {
     }
 
     /*@Test
-    public void foodTypeIsSentToRecipesActivity() {
+    public void foodTypeIsSentToRecipesActivity(){
         String foodType = "Desserts";
         onView(withId(R.id.foodTypeEditText)).perform(typeText(foodType)).perform(closeSoftKeyboard());
         try {
@@ -42,6 +42,6 @@ public class MainActivityInstrumentationTest {
         }
         onView(withId(R.id.findRecipesButton)).perform(click());
         onView(withId(R.id.foodTypeTextView)).check(matches
-                (withText("Here are all the related recipes: " + foodType)));
+                (withText("Here are all the related recipes : " + foodType)));
     }*/
 }

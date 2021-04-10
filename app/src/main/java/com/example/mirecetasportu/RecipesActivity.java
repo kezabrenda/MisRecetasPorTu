@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -38,11 +39,13 @@ public class RecipesActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
                 String dessert = ((TextView)view).getText().toString();
                 Toast.makeText(RecipesActivity.this, dessert, Toast.LENGTH_LONG).show();
+                Log.v( TAG, "In the onItemClickListener!");
             }
         });
 
         Intent intent = getIntent();
         String foodType = intent.getStringExtra("foodType");
         mFoodTypeTextView.setText("Here are all the related recipes: " + foodType);
+        Log.d( TAG, "In the onCreate method!");
     }
 }

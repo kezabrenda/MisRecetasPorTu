@@ -11,8 +11,9 @@ import android.widget.EditText;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     public static final String TAG = MainActivity.class.getSimpleName();
+
     @BindView(R.id.findRecipesButton) Button mFindRecipesButton;
     @BindView(R.id.foodTypeEditText) EditText mFoodTypeEditText;
 
@@ -22,13 +23,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
-        mFindRecipesButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String foodType = mFoodTypeEditText.getText().toString();
-                Intent intent = new Intent(MainActivity.this, RecipesActivity.class);
-                startActivity(intent);
-            }
-        });
+        mFindRecipesButton.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View v) {
+        String foodType = mFoodTypeEditText.getText().toString();
+        Intent intent = new Intent(MainActivity.this, RecipesActivity.class);
+        intent.putExtra("foodType", foodType);
+        startActivity(intent);
     }
 }
