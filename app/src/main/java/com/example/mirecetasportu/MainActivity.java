@@ -20,11 +20,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         ButterKnife.bind(this);
-
-        mFoodTypeEditText = (EditText) findViewById(R.id.foodTypeEditText);
-        mFindRecipesButton = (Button) findViewById(R.id.findRecipesButton);
 
         mFindRecipesButton.setOnClickListener(new View.OnClickListener() {
             @Override

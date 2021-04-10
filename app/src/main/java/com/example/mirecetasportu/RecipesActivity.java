@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 
 public class RecipesActivity extends AppCompatActivity {
     public static final String TAG = RecipesActivity.class.getSimpleName();
@@ -27,10 +28,8 @@ public class RecipesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recipes);
+        ButterKnife.bind(this);
 
-        mFoodTypeTextView = (TextView) findViewById(R.id.foodTypeTextView);
-
-        mListView = (ListView) findViewById(R.id.listView);
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, dessertRecipes);
         mListView.setAdapter(adapter);
 
