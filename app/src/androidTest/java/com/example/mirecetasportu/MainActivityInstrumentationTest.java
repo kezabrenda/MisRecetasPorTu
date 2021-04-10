@@ -23,5 +23,9 @@ public class MainActivityInstrumentationTest {
     public ActivityScenarioRule<MainActivity> activityRule =
             new ActivityScenarioRule<>(MainActivity.class);
 
-
+    @Test
+    public void validateEditText() {
+        onView(withId(R.id.foodTypeEditText)).perform(typeText("Desserts"))
+                .check(matches(withText("Desserts")));
+    }
 }
