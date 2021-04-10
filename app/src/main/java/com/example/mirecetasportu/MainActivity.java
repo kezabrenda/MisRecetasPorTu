@@ -12,6 +12,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
+    public static final String TAG = MainActivity.class.getSimpleName();
     @BindView(R.id.findRecipesButton) Button mFindRecipesButton;
     @BindView(R.id.foodTypeEditText) EditText mFoodTypeEditText;
 
