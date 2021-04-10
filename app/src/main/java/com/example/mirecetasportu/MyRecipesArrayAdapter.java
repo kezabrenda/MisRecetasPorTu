@@ -19,7 +19,7 @@ public class MyRecipesArrayAdapter extends ArrayAdapter {
     public Object getItem(int position) {
         String dessertRecipes = mDessertRecipes[position];
         String cookingTime = mCookingTime[position];
-        return String.format("%s \nCooks for about: %s", dessertRecipes, cookingTime);
+        return String.format("%s \nCooks for about %s", dessertRecipes, cookingTime);
     }
 
     @Override
